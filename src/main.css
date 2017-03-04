@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body,#root{
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: pink;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+header h3{
+  color:#fff;
+}
+footer{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  background-color: pink;
+}
+footer a{
+  border-right: 1px solid #eee;
+  text-decoration: none;
+  color:#800a41;
+  flex-grow: 1;
+}
+footer a:last-child{
+  border: none;
+}
+.mywrap{
+  flex-grow: 1;
+  overflow-y: scroll;
+  display:flex;
+}
+.home{
+  width: 100%;
+  background-image: url(images/psbe.jpeg);
+  background-size: cover;
+  background-position: 35% 50%;
+}
+.home-cover{
+  height: 100%;
+  background-color:rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.home-cover h1{
+  color: deeppink;
+  text-shadow: 0px 0px 2px pink;
+}
+.home-cover p{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #cebcc5;
+}
+.home-cover a{
+  text-decoration: none;
+  color:#c10d61;
+  display: block;
+  width: 9em;
+  line-height: 2.8;
+  margin: 0 auto;
+  border-right: 8px;
+  background-color: #c590a9;
+  box-shadow: 0px 0px 2px 3px pink;
+}
