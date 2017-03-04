@@ -2,14 +2,30 @@ import React from 'react';
 import axios from "axios";
 
 class Blog extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      data:[]
+    }
+  }
   componentDidMount(){
-    axios.get("https://raw.githubusercontent.com/newming/demodata/master/duopingshidai.json")
-    .then( res => console.log(res))
+    axios.get("https://raw.githubusercontent.com/yinguolong/myblog/master/blogs/blogs.json")
+    .then( res => this.setState({data:res.data}))
   }
   render () {
     return(
-      <div>
-        Blog
+      <div style = {{width:"100%"}}>
+        {this.state.data.length==0 ? "等等我马上就好" : this.state.data.map((item,i) =>
+        <div key={i} className = "card">
+          <div className = "blog-index">{i}</div>
+          <div className = "blog-desc">
+            <h2>{item.title}</h2>
+            <p>{item.desc}</p>
+            <a href={item.url}>阅读更多</a>
+            <span>{item.date}</span>
+          </div>
+        </div>
+      )}
       </div>
     )
   }
