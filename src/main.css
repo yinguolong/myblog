@@ -12,6 +12,33 @@ html,body,#root{
   flex-direction: column;
   height: 100%;
 }
+@media (min-width:750px) {
+  .root{
+    flex-direction: row;
+  }
+}
+.leftnav{
+  background-color: pink;
+  width: 200px;
+}
+.leftnav h1{
+  color:#fff;
+  text-align: center;
+  line-height: 2.6;
+  font-size: 24px;
+  border-bottom: 1px solid #f378b1;
+}
+.leftnav a{
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 2.3;
+  padding-left: 20px;
+  color:#800a41;
+}
+.leftnav a:hover{
+  background-color: rgba(0,0,0,0.3);
+}
 header{
   height: 80px;
   display: flex;
